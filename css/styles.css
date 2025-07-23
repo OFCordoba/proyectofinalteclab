@@ -28,12 +28,10 @@ footer .btn-dark {
   box-shadow: 0 2px 12px rgba(0,76,64,0.07);
   border: 1px solid #009688;
 }
-
 .arte-ecologico-section h2,
 .arte-ecologico-section h3 {
   color: #004d40;
 }
-
 .beneficios-arte-ecologico {
   background: #ffe082;
   padding: 1em 1.2em;
@@ -42,8 +40,56 @@ footer .btn-dark {
   margin-top: 1em;
   color: #333;
 }
-
 .arte-ecologico-section ul,
 .arte-ecologico-section ol {
   margin-left: 1em;
+}
+
+/* Sobre mí */
+.sobre-mi-section {
+  background: #e0f7fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,76,64,0.07);
+  padding: 2em 1em;
+}
+.sobre-mi-section img {
+  border: 3px solid #009688;
+}
+
+/* Testimonios */
+.testimonios-section h2 {
+  color: #004d40;
+}
+.testimonios-section .card {
+  background: #fafafa;
+  border: 1px solid #b2dfdb;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,76,64,0.04);
+}
+
+/* Contador */
+.contador-section {
+  background: #fff8e1;
+  border-radius: 12px;
+  padding: 1.5em 1em;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 12px rgba(255,193,7,0.07);
+}
+
+/* Footer links */
+footer a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+footer a:hover {
+  color: #ffe082;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #e0f7fa;
+  border-radius: 12px 12px 0 0;
+  padding: 6px;
 }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Arte Ecológico – Inicio</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -13,16 +14,42 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <!-- Header / Hero -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand text-success fw-bold" href="index.html">Arte Ecológico</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonios.html">Testimonios</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Hero/Header -->
   <header class="text-center text-white py-5"
           style="background: url('assets/hero.jpg') center/cover no-repeat; height: 60vh;">
     <div class="container h-100 d-flex flex-column justify-content-center">
-      <h1 class="display-4">Súmate al reciclaje</h1>
-      <p class="lead">Decora tu espacio con arte ecológico y sostenible.</p>
+      <h1 class="display-4">Sumate al reciclaje</h1>
+      <p class="lead">Decorá tu espacio con arte ecológico y sostenible.</p>
       <a href="gallery.html" class="btn btn-success mx-1">Ver Galería</a>
-      <a href="contact.html" class="btn btn-dark mx-1">Contáctanos</a>
+      <a href="contact.html" class="btn btn-dark mx-1">Contactanos</a>
     </div>
   </header>
+
+  <!-- Contador de proyectos reciclados -->
+  <section id="contador" class="contador-section container text-center my-4">
+    <h2 class="mb-2">¡Ya reciclamos más de <span id="reciclados" class="text-success fw-bold">0</span> objetos!</h2>
+    <p class="text-muted">Cada creación suma al cuidado del planeta.</p>
+  </section>
 
   <!-- Sección Arte Ecológico -->
   <section id="arte-ecologico" class="arte-ecologico-section container my-5">
@@ -56,7 +83,14 @@
     </p>
   </section>
 
-  <!-- Preguntas frecuentes acordeón -->
+  <!-- Breve presentación y enlaces a páginas nuevas -->
+  <section class="container my-5 text-center">
+    <h2>¿Quieres saber más sobre mí?</h2>
+    <a href="sobre-mi.html" class="btn btn-outline-success mx-2">Sobre mí</a>
+    <a href="testimonios.html" class="btn btn-outline-primary mx-2">Testimonios</a>
+  </section>
+
+  <!-- FAQ Accordion -->
   <section class="container my-5">
     <h2>Preguntas Frecuentes</h2>
     <div class="accordion" id="faqAccordion">
@@ -96,11 +130,36 @@
   <!-- Footer -->
   <footer class="mt-auto bg-dark text-center text-white py-3">
     &copy; 2025 Arte Ecológico
+    <div class="mt-2">
+      <a href="#" class="text-white mx-2">Instagram</a>
+      <a href="#" class="text-white mx-2">Facebook</a>
+      <a href="#" class="text-white mx-2">YouTube</a>
+    </div>
   </footer>
 
   <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <!-- Contador animado -->
+  <script>
+    function animateCounter(id, end, duration = 1800) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const increment = end / (duration / 20);
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= end) {
+          el.textContent = end;
+          clearInterval(counter);
+        } else {
+          el.textContent = Math.floor(start);
+        }
+      }, 20);
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      animateCounter("reciclados", 120);
+    });
+  </script>
 </body>
 </html>
