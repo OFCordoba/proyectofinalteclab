@@ -19,3 +19,29 @@ footer .btn,
 footer .btn-dark {
   background-color: #004d40;
 }
+
+/* ...todo tu contenido anterior... */
+
+/* Sección Arte Ecológico (color más notorio y contrastante) */
+.arte-ecologico-section {
+  background: #b2dfdb; /* Verde agua, más saturado y visible */
+  border-radius: 12px;
+  padding: 2.5em 2em;
+  box-shadow: 0 2px 12px rgba(0,76,64,0.07);
+  border: 1px solid #009688;
+}
+
+.arte-ecologico-section h2,
+.arte-ecologico-section h3 {
+  color: #004d40;
+}
+
+/* Bloque de beneficios, más contraste */
+.beneficios-arte-ecologico {
+  background: #ffe082; /* Amarillo pastel, más visible */
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  border-left: 5px solid #009688;
+  margin-top: 1em;
+  color: #333;
+}
